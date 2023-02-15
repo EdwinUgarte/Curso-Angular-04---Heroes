@@ -1,0 +1,9 @@
+.buscador{
+    width: 100%;
+}
+.card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}

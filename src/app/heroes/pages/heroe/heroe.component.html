@@ -1,0 +1,58 @@
+<!-- Spinner de carga -->
+
+<mat-grid-list cols="1" *ngIf="!heroe; else divHeroe">
+  <mat-grid-tile>
+    <mat-spinner></mat-spinner>
+  </mat-grid-tile>
+</mat-grid-list>
+
+<!-- Codigo heroe -->
+<ng-template #divHeroe>
+  <div class="hero">
+    <div class="section">
+      <h1>{{ heroe.superhero }}</h1>
+      <hr />
+      <img [src]="heroe | imagen" alt="imagen" />
+    </div>
+
+    <div class="section">
+      <h1>{{ heroe.publisher }}</h1>
+      <hr />
+      <mat-grid-list cols="1">
+        <mat-list>
+          <mat-list-item>
+            <mat-icon matListItemIcon>accessibility</mat-icon>
+            <div matListItemTitle>Super Heroe:</div>
+            <div matListItemLine>{{ heroe.superhero }}</div>
+          </mat-list-item>
+
+          <mat-list-item>
+            <mat-icon matListItemIcon>accessibility</mat-icon>
+            <div matListItemTitle>Alter Ego:</div>
+            <div matListItemLine>{{ heroe.alter_ego }}</div>
+          </mat-list-item>
+
+          <mat-list-item>
+            <mat-icon matListItemIcon>verified_user</mat-icon>
+            <div matListItemTitle>Escritora:</div>
+            <div matListItemLine>{{ heroe.publisher }}</div>
+          </mat-list-item>
+
+          <mat-list-item>
+            <mat-icon matListItemIcon>feedback</mat-icon>
+            <div matListItemTitle>Primera Aparición:</div>
+            <div matListItemLine>{{ heroe.first_appearance }}</div>
+          </mat-list-item>
+
+          <mat-list-item>
+            <mat-icon matListItemIcon>face</mat-icon>
+            <div matListItemTitle>Personajes:</div>
+            <div matListItemLine>{{ heroe.characters }}</div>
+          </mat-list-item>
+          <button mat-raised-button color="warn" routerLink="heroes/listado">Regresar</button>
+        </mat-list>
+      </mat-grid-list>
+    </div>
+  </div>
+</ng-template>
+

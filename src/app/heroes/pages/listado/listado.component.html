@@ -1,0 +1,10 @@
+<h1>Listado de Heroes</h1>
+<hr />
+<br />
+
+<div class="menu-cards">
+  <div  *ngFor="let heroe of heroes">
+    <app-heroe-card [heroe]="heroe"></app-heroe-card>
+  </div>
+</div>
+

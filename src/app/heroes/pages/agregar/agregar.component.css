@@ -1,0 +1,47 @@
+.contenedor{
+    display: flex;
+    gap: 40px;
+
+}
+
+.modulo {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+height: 600px;
+}
+
+mat-form-field{
+    width: 100%;
+}
+
+#botones {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+button{
+    width: 200px;
+}
+
+img{
+    width: 60%;
+    height: 100%;
+}
+
+@media screen and (max-width: 600px) {
+    
+    .contenedor{
+        flex-direction: column-reverse;
+    }
+
+    .modulo{
+        width: 100%;
+    }
+    
+    img{
+        width: 100%;
+    }
+}
